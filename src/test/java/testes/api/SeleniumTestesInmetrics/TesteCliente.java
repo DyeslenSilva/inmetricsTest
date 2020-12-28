@@ -35,7 +35,7 @@ class TesteCliente {
 		assertTrue(cursos.isDisplayed());
 		
 		WebElement faculdades = driver.findElement(By.id("endereco"));
-		assertTrue(faculdades.getText().equals("enderecoCliente"));
+		assertTrue(faculdades.getText().equals("enderecoCliente"	));
 	}
 	
 	public void atualizar() {
