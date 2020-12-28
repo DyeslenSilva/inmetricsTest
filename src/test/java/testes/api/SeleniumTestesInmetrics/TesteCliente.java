@@ -22,20 +22,20 @@ class TesteCliente {
 	@Before
 	public void setup() {
 		driver = new ChromeDriver();
-		driver.get("https://inmetrics.com.br");
+		driver.get("https://nga.com.br");
 		driver.manage().window().maximize();
 	}
 	
 	@Test
 	public void encontrarElementos() {
-		WebElement processoSeletivo = driver.findElement(By.className("option-switcher-heading"));
-		assertTrue(processoSeletivo.getText().contains("prova"));
+		WebElement processoSeletivo = driver.findElement(By.className("clientSide"));
+		assertTrue(processoSeletivo.getText().contains("cliente"));
 		
-		WebElement cursos = driver.findElement(By.id("ctl00_menuprincipal_hp10"));
+		WebElement cursos = driver.findElement(By.id("nomeCliente"));
 		assertTrue(cursos.isDisplayed());
 		
-		WebElement faculdades = driver.findElement(By.id("ctl00_menuprincipal_logo"));
-		assertTrue(faculdades.getText().equals("docentes"));
+		WebElement faculdades = driver.findElement(By.id("endereco"));
+		assertTrue(faculdades.getText().equals("enderecoCliente"));
 	}
 	
 	public void atualizar() {
